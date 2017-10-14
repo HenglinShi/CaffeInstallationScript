@@ -5,6 +5,7 @@ cd yasm-1.3.0/
 ./configure --prefix=$HOME/local
 make
 make install
+cd ..
 
 ##
 wget http://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
@@ -13,7 +14,7 @@ cd jasper-1.900.1/
 ./configure --enable-shared --prefix=$HOME/local
 make
 make install
-
+cd ..
 
 #Install FFmpeg
 wget https://www.ffmpeg.org/releases/ffmpeg-2.8.12.tar.gz
@@ -23,7 +24,7 @@ cd ffmpeg-2.8.12
 make
 make install
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/local/lib/pkgconfig
-
+cd ..
 
 #Install opencv
 wget https://github.com/opencv/opencv/archive/2.4.13.tar.gz
@@ -36,6 +37,8 @@ cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=$HOME/local -D BUILD_opencv_gpu=OFF -DCUDA_HOST_COMPILER=/usr/bin/g++ -D CUDA_GENERATION=Kepler ..
 make -j32
 make install
+cd ..
+cd ..
 
 #安装gflags完成后，再安装glog。其它顺序随意
 #install gflags-1.7
@@ -45,6 +48,7 @@ cd gflags-1.7
 ./configure --prefix=$HOME/local
 make -j32
 make install
+cd ..
 
 #install glog 0.3.3
 wget https://github.com/google/glog/archive/v0.3.3.tar.gz
@@ -53,7 +57,7 @@ cd glog-0.3.3
 ./configure --prefix=$HOME/local
 make -j32
 make install
-
+cd ..
 
 #install protobuf 2.5.0
 
