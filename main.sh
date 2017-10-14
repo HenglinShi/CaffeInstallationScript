@@ -1,3 +1,20 @@
+#
+wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
+tar -xzvf yasm-1.3.0.tar.gz
+cd yasm-1.3.0/
+./configure --prefix=$HOME/local
+make
+make install
+
+##
+wget http://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
+unzip jasper-1.900.1.zip
+cd jasper-1.900.1/
+./configure --enable-shared --prefix=$HOME/local
+make
+make install
+
+
 #Install FFmpeg
 wget https://www.ffmpeg.org/releases/ffmpeg-2.8.12.tar.gz
 tar -xzvf ffmepg-2.8.12.tar.gz
