@@ -26,6 +26,11 @@ make install
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/local/lib/pkgconfig
 cd ..
 
+#Activate python 2.7
+
+# Active cuda
+
+
 #Install opencv
 wget https://github.com/opencv/opencv/archive/2.4.13.tar.gz
 tar -xzvf 2.4.13.tar.gz
@@ -60,8 +65,28 @@ make install
 cd ..
 
 #install protobuf 2.5.0
+wget https://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.tar.gz
+tar -xzvf protobuf-2.5.0.tar.gz
+cd protobuf-2.5.0
+./configure --prefix=$HOME/local
+make
+make install
+cd ..
 
 #install boost 1.55.0
+wget https://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz
+tar -xzvf boost_1_55_0.tar.gz
+cd boost_1_55_0
+./bootstrap.sh --prefix=$HOME/local
+./b2 -j 32
+./b2 install
+cd ..
+
+# install pip
+mkdir pip
+wget https://bootstrap.pypa.io/get-pip.py
+
 
 #install hdf5
+
 
