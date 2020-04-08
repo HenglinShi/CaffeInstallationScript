@@ -16,6 +16,21 @@ make
 make install
 cd ..
 
+##
+wget https://www.nasm.us/pub/nasm/releasebuilds/2.14.02/nasm-2.14.02.tar.gz
+tar -xzvf nasm-2.14.02.tar.gz
+cd nasm-2.14.02
+./configure  --prefix=$HOME/local
+make
+make install
+cd ..
+
+
+git clone https://code.videolan.org/videolan/x264.git
+cd x264
+./configure --enable-shared --enable-static --prefix=$HOME/local
+
+
 #Install FFmpeg
 wget https://www.ffmpeg.org/releases/ffmpeg-2.8.12.tar.gz
 tar -xzvf ffmepg-2.8.12.tar.gz
