@@ -35,7 +35,7 @@ cd x264
 wget https://www.ffmpeg.org/releases/ffmpeg-2.8.12.tar.gz
 tar -xzvf ffmepg-2.8.12.tar.gz
 cd ffmpeg-2.8.12
-./configure --enable-shared --enable-gpl --enable-swscale --prefix=$HOME/local
+./configure --enable-shared --enable-gpl --enable-swscale --enable-libx264 --prefix=$HOME/local
 make
 make install
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/local/lib/pkgconfig
