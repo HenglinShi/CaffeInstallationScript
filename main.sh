@@ -71,9 +71,9 @@ make install
 cd ..
 
 #install glog 0.3.3
-wget https://github.com/google/glog/archive/v0.3.3.tar.gz
-tar -xzvf v0.3.3.tar.gz
-cd glog-0.3.3
+wget https://github.com/google/glog/archive/v0.7.1.tar.gz
+tar -xzvf v0.7.1.tar.gz
+cd glog-0.7.1
 ./configure --prefix=$HOME/local
 make -j32
 make install
