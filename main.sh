@@ -74,8 +74,9 @@ cd ..
 wget https://github.com/google/glog/archive/v0.7.1.tar.gz
 tar -xzvf v0.7.1.tar.gz
 cd glog-0.7.1
-./configure --prefix=$HOME/local
-make -j32
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/local #./configure --prefix=$HOME/local
+cmake build -j32
 make install
 cd ..
 
