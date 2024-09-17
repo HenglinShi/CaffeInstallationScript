@@ -65,7 +65,7 @@ cd ..
 wget https://github.com/gflags/gflags/archive/v1.7.tar.gz
 tar -xzvf v1.7.tar.gz
 cd gflags-1.7
-./configure --prefix=$HOME/local
+./configure --prefix=$HOME/local CXXFLAG='-fPIC'
 make -j32
 make install
 cd ..
